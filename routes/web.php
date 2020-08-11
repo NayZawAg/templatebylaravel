@@ -13,7 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    // return view('welcome');
-    return 'Hello Laravel';
-});
+// Route::get('/', function () {
+//     return view('welcome');    
+// })->name('home');//data show page
+
+
+Route::get('/', 'Pagecontroller@homefun')->name('homename');
+
+Route::get('about', 'Pagecontroller@aboutfun')->name('aboutname');
+
+Route::get('contact', 'Pagecontroller@contactfun')->name('contactname');
+
+Route::get('post', 'Pagecontroller@postfun')->name('postname');
